@@ -42,16 +42,17 @@ public class InputManager : MonoBehaviour
 
     private void OnDisable()
     {
-        TouchSimulation.Disable();
-        EnhancedTouchSupport.Disable();
         UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown -= FingerDown;
         UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerUp -= FingerUp;
         UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerMove -= FingerMoved;
+        TouchSimulation.Disable();
+        EnhancedTouchSupport.Disable();
     }
 
 
     private void FingerDown(Finger finger)
     {
+
         Debug.Log("Touch position " + finger.screenPosition);
 
         if (OnStartTouch != null)
