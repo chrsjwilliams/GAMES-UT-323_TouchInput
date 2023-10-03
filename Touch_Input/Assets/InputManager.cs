@@ -57,7 +57,7 @@ public class InputManager : MonoBehaviour
 
         if (OnStartTouch != null)
         {
-            OnStartTouch(finger.screenPosition, Time.time);
+            OnStartTouch(finger.screenPosition, Time.fixedTime);
         }
     }
 
@@ -67,7 +67,7 @@ public class InputManager : MonoBehaviour
 
         if (OnEndTouch != null)
         {
-            OnEndTouch(finger.screenPosition, Time.time);
+            OnEndTouch(finger.screenPosition, Time.fixedTime);
         }
     }
 
@@ -75,7 +75,7 @@ public class InputManager : MonoBehaviour
     {
         if(OnTouchMoved != null)
         {
-            OnTouchMoved(finger.screenPosition, Time.time);
+            OnTouchMoved(finger.screenPosition, Time.fixedTime);
         }
     }
 }

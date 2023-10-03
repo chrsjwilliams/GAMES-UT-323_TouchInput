@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+
 public class TouchInputTest : MonoBehaviour
 {
     // To cache references for better perfromance
